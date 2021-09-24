@@ -22,7 +22,7 @@ const draw = (e) => {
     if (maxY < e.clientY) maxY = e.clientY;
     if (minY > e.clientY) minY = e.clientY;
     ctx.beginPath();
-    ctx.arc(e.clientX, e.clientY, 1, 0, 3.14);
+    ctx.arc(e.clientX, e.clientY, 1, 0, Math.PI);
     ctx.stroke();
   }
 
@@ -50,7 +50,7 @@ const draw = (e) => {
 const setTimer = (e) => {
   flag = true;
   intervalID = setInterval(function () {
-    addTime(e);
+    draw(e);
   }, 1000);
 }
 
